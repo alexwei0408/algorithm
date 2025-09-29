@@ -137,8 +137,12 @@ $$
 T(n)&=T(\frac{n}{7})+T(\frac{5n}{7})+n \\
     &\le c(\frac{n}{7}) +c\frac{5n}{7}+n \\
     &=\frac{6cn}{7} +n \\
-    &\le cn \\
+    &\le cn. \\
 \end{align}
-$$.
+$$
 
 By induction we have show that $T(n)=O(n)$ for all $n \ge7, c= 7c_{0}$
+
+ii)Similar analysis to (i), then we get $T(n)=T(\frac{n}{3})+T(\frac{2n}{3})+n$. Guess $T(n)=O(nlgn)$, which implies that we want to show $T(n) \le cnlgn$.
+
+
