@@ -102,3 +102,8 @@ sol:
 ## 6)Use the master method to derive asymptotic tight bound for $T(n)=2T(\frac{n}{4})+\sqrt{n}.$
 sol: Take $a=2,b=4$, and we have $n^{lg_{4}(2)}=\sqrt{n}$. Let $k=0$. Then $f(n)=\Omega(\sqrt{n}lg^{k}n)=\Omega(\sqrt{n})$.By master method of case 2, we get $T(n)=\Theta(\sqrt{n}lg(n))$.
 
+## 7）Use the master method to derive asymptotic tight bound for $T(n)=2T(\frac{n}{4})+n$.  
+sol: Take $a=2,b=4$, we have watershed function $n^{lg_{4}}2=n^{\frac{1}{2}}$. Let $\epsilon =0.1, c=\frac{3}{4}$. 
+Then $f(n)=\Omega(n^{lg_{4}(2)+\epsilon})$, and $af(\frac{n}{b})=2f(\frac{n}{4})=\frac{n}{2} \lt \frac{3}{4}n=cf(n).$ Therefore, by master method of case 3, $T(n)= \Theta(n)$
+
+
