@@ -3,6 +3,11 @@ sol: $n!>2^{n}>\frac{3}{2}^{n}>n^{2}=4^{lgn}>nlgn>n>lgn>lg^{\star}n>1$
 
 ## 2)Indicate, for each pair of $(A,B)$ , whether 𝐴 is $O,o,\Omega,\omega, \Theta$ of B. Assume that $𝑘 \ge 1, \epsilon > 0$, and $𝑐 > 1$ are constants. Write you answer in the for of "yes" or "no".
 sol:
+| A          | B            | O   | o   | $\Omega$ | $\omega$ | $\Theta$ |
+|------------|--------------|-----|-----|----------|----------|----------|
+| $lg^{k}n$  | $n^{\epsilon}$ |  yes  |  yes   |      no    |     no     |     no     |
+| $n^{k}$    | $c^{n}$      |  yes |  yes   | no | no |     no     |
+
 
 ## 3)Use Strassen’s algorithm to compute
 
@@ -117,3 +122,23 @@ sol:<img width="2828" height="1000" alt="image" src="https://github.com/user-att
 i) Show that the algorithm runs in linear time if the input are divided into groups of 7 instead of 5.   
 ii) Show that the algorithm does not run in linear time if the input are divided into groups of 3.
 
+i)   
+~Partition the n elements into $\lceil \frac{n}{7} \rceil$ groups of 7 elemetnts, and at most one group made of the remaining n mod 5 elements.--(i)  
+~Find the median of each of the $\lceil \frac{n}{7} \rceil$ groups.---(ii)  
+~Use algorithm SELECT recursively to find the median x of the $\lceil \frac{n}{7} \rceil$, and it will give us median of medians, we call it 'p'.---(iii)  
+~Step(iii) make sure that exits $\frac{n}{14} \text{ median} \ge p$ and for each group there extis four elements $\ge$ it medians $\ge p$. Thus we have $\frac{2n}{7} \ge p$, and for the worst case, have $\frac{5n}{7}$ elements need to do recursive after partition.---(iv)  
+
+Therefore, step(i),(ii) take $O(n)$ times, and step(iii) takes $T(\lceil \frac{n}{7} \rceil)$, and step(iv) takes $T(\frac{5n}{7})$ times.
+Hence, we conclude the recursive $T(n)=T(\lceil \frac{n}{7} \rceil)+T(\frac{5n}{7})+O(n)$.  
+Now, we want to show $T(n)=O(n)$. Guess $T(n) \le cn$ for some constant c. For all $n \le 7$, cleary $T(n)=c_{0}$, and so $T(n)\le Cn \text{ for c} \ge 7c_{0}$. Assume the statement true for all $m<n$. Then
+
+$$
+\begin{align}
+T(n)&=T(\frac{n}{7})+T(\frac{5n}{7})+n \\
+    &\le c(\frac{n}{7}) +c\frac{5n}{7}+n \\
+    &=\frac{6cn}{7} +n \\
+    &\le cn \\
+\end{align}
+$$.
+
+By induction we have show that $T(n)=O(n)$ for all $n \ge7, c= 7c_{0}$
