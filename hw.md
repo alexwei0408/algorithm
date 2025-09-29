@@ -103,7 +103,7 @@ Since for all $c \ge 1$, we have $T(n) \le cn^{2},$ for some n is larger. Then $
 
 ## 5) i)Sketch the recursion tree for $T(n)=3T(n-1)+n$ and ii)guess a good asymptotic upper bound on its solution; you don't need to verify your answer in (ii).  
 sol:  
-i)  <img width="1536" height="448" alt="image" src="https://github.com/user-attachments/assets/fa666c01-ec69-405a-b730-dfef672c9738" />
+i)  <img width="900" height="300" alt="image" src="https://github.com/user-attachments/assets/fa666c01-ec69-405a-b730-dfef672c9738" />
 
 ii) $O(3^{n})$.  
 
@@ -115,7 +115,7 @@ sol: Take $a=2,b=4$, we have watershed function $n^{lg_{4}}2=n^{\frac{1}{2}}$. L
 Then $f(n)=\Omega(n^{lg_{4}(2)+\epsilon})$, and $af(\frac{n}{b})=2f(\frac{n}{4})=\frac{n}{2} \lt \frac{3}{4}n=cf(n).$ Therefore, by master method of case 3, $T(n)= \Theta(n)$
 
 ## 8)Draw the decision tree for insertion sort operating on four elements.  
-sol:<img width="2828" height="1000" alt="image" src="https://github.com/user-attachments/assets/36a25a41-444b-4372-8c0a-16e18bdc0b98" />
+sol:<img width="900" height="450" alt="image" src="https://github.com/user-attachments/assets/36a25a41-444b-4372-8c0a-16e18bdc0b98" />
 
 
 ## 9)In the algorithm SELECT, the input are divided into groups of 5. 
