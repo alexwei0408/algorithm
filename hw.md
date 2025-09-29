@@ -106,4 +106,10 @@ sol: Take $a=2,b=4$, and we have $n^{lg_{4}(2)}=\sqrt{n}$. Let $k=0$. Then $f(n)
 sol: Take $a=2,b=4$, we have watershed function $n^{lg_{4}}2=n^{\frac{1}{2}}$. Let $\epsilon =0.1, c=\frac{3}{4}$. 
 Then $f(n)=\Omega(n^{lg_{4}(2)+\epsilon})$, and $af(\frac{n}{b})=2f(\frac{n}{4})=\frac{n}{2} \lt \frac{3}{4}n=cf(n).$ Therefore, by master method of case 3, $T(n)= \Theta(n)$
 
+## 8)Draw the decision tree for insertion sort operating on four elements.  
+sol:
+
+## 9)In the algorithm SELECT, the input are divided into groups of 5. 
+i) Show that the algorithm runs in linear time if the input are divided into groups of 7 instead of 5.   
+ii) Show that the algorithm does not run in linear time if the input are divided into groups of 3.
 
