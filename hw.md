@@ -82,3 +82,23 @@ $$
 10&38
 \end{pmatrix}
 $$
+
+## 4)Use the substitution method to show that $T(n)=T(n-1)+n$ has solution $T(n)=O(n^{2})$.  
+sol: Suppose that $T(n)<=n^{2}$, for some constant $c>0$, for all $n>n_{0}-(\star)$. By indution on n, when n=2, $T(2)=T(1)+2=3<=4c$, which implies that $c>=\frac{3}{4}>0$, $(\star)$ is true. Assume $(\star)$ hold for $2,...,n-1$. Then 
+
+$$ 
+\begin{align}
+T(n) &= T(n-1)+ n \\ 
+&\le c(n-1)^{2} + n \\ 
+&=cn^{2}-2cn+(c+n) \\ 
+\end{align} 
+$$
+
+Since for all $c \ge 1$, we have $T(n) \le cn^{2},$ for some n is larger. Then $(\star)$ holds for all $n \in \mathbb{N}.$
+
+## 5) i)Sketch the recursion tree for $T(n)=3T(n-1)+n$ and ii)guess a good asymptotic upper bound on its solution; you don't need to verify your answer in (ii).  
+sol:
+
+## 6)Use the master method to derive asymptotic tight bound for $T(n)=2T(\frac{n}{4})+\sqrt{n}.$
+sol: Take $a=2,b=4$, and we have $n^{lg_{4}(2)}=\sqrt{n}$. Let $k=0$. Then $f(n)=\Omega(\sqrt{n}lg^{k}n)=\Omega(\sqrt{n})$.By master method of case 2, we get $T(n)=\Theta(\sqrt{n}lg(n))$.
+
